@@ -6,32 +6,23 @@ const values = [
   { emoji: "🕐", title: "Reliability", desc: "Consistent, dependable support you can count on." },
 ];
 
-const galleryPhotos = [
-  {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
-    alt: "Caregiver bringing a meal to elderly client at home",
+const galleryPhotos = {
+  main: {
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80",
+    alt: "Caregiver bringing a nutritious meal to elderly client at home",
     caption: "Meal Preparation",
-    span: "col-span-2 row-span-2",
   },
-  {
-    src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=400&q=80",
-    alt: "Caregiver in conversation with elderly lady",
+  topRight: {
+    src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=500&q=80",
+    alt: "Caregiver in warm conversation with elderly lady",
     caption: "Companionship",
-    span: "col-span-1 row-span-1",
   },
-  {
-    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&q=80",
-    alt: "Supportive care professional with senior client",
+  bottomRight: {
+    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80",
+    alt: "Attentive caregiver providing professional home support",
     caption: "Home Support",
-    span: "col-span-1 row-span-1",
   },
-  {
-    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80",
-    alt: "Caregiver assisting with daily tasks",
-    caption: "Daily Assistance",
-    span: "col-span-2 row-span-1",
-  },
-];
+};
 
 export default function About() {
   return (
@@ -39,30 +30,52 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left: photo gallery grid */}
+          {/* Left: photo gallery */}
           <div className="relative order-2 lg:order-1">
-            <div className="grid grid-cols-3 grid-rows-3 gap-3 h-[420px]">
-              {galleryPhotos.map((photo, i) => (
-                <div
-                  key={i}
-                  className={`relative ${photo.span} rounded-2xl overflow-hidden group cursor-default`}
-                >
+            <div className="flex gap-3 h-[460px]">
+
+              {/* Main tall photo — left column */}
+              <div className="relative flex-1 rounded-3xl overflow-hidden group cursor-default">
+                <img
+                  src={galleryPhotos.main.src}
+                  alt={galleryPhotos.main.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white text-xs font-semibold bg-sky-600/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                  {galleryPhotos.main.caption}
+                </span>
+              </div>
+
+              {/* Right column — two stacked photos */}
+              <div className="flex flex-col gap-3 w-[45%]">
+                <div className="relative flex-1 rounded-3xl overflow-hidden group cursor-default">
                   <img
-                    src={photo.src}
-                    alt={photo.alt}
+                    src={galleryPhotos.topRight.src}
+                    alt={galleryPhotos.topRight.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* caption overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-sky-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="absolute bottom-3 left-3 text-white text-xs font-semibold bg-sky-600/80 backdrop-blur-sm px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                    {photo.caption}
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="absolute bottom-3 left-3 text-white text-xs font-semibold bg-sky-600/80 backdrop-blur-sm px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+                    {galleryPhotos.topRight.caption}
                   </span>
                 </div>
-              ))}
+                <div className="relative flex-1 rounded-3xl overflow-hidden group cursor-default">
+                  <img
+                    src={galleryPhotos.bottomRight.src}
+                    alt={galleryPhotos.bottomRight.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="absolute bottom-3 left-3 text-white text-xs font-semibold bg-sky-600/80 backdrop-blur-sm px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+                    {galleryPhotos.bottomRight.caption}
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Floating mission card */}
-            <div className="absolute -bottom-6 -right-4 bg-white rounded-2xl p-5 shadow-2xl border border-sky-100 max-w-[220px]">
+            <div className="absolute -bottom-5 left-4 bg-white rounded-2xl p-5 shadow-2xl border border-sky-100 max-w-[210px]">
               <div className="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center mb-2">
                 <span className="text-lg">🎯</span>
               </div>
