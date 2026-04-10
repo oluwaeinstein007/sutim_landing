@@ -57,7 +57,20 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-5 gap-10">
           {/* Contact details */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-5">
+            {/* Care photo */}
+            <div className="relative h-44 rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80"
+                alt="Caregiver providing compassionate home support"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-sky-900/70 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-bold text-sm">Ready to help you today</p>
+                <p className="text-sky-200 text-xs">Compassionate care you can count on</p>
+              </div>
+            </div>
             {[
               {
                 icon: Phone,
@@ -88,7 +101,7 @@ export default function Contact() {
             ].map(({ icon: Icon, label, lines, href, color }) => (
               <div
                 key={label}
-                className="flex items-start gap-4 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-start gap-4 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-sky-200 transition-all duration-200"
               >
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${color}`}>
                   <Icon className="w-5 h-5" />

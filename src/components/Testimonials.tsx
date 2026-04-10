@@ -4,21 +4,24 @@ const testimonials = [
     role: "Client's Daughter",
     text: "The team at Sutim have been absolutely wonderful with my mother. She looks forward to every visit and always seems so much happier afterwards. We couldn't be more grateful.",
     stars: 5,
-    avatar: "👩",
+    photo: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=200&q=80",
+    service: "Companionship",
   },
   {
     name: "David H.",
     role: "Client",
     text: "I was nervous about getting help at home, but from the very first day I felt completely at ease. They are kind, professional, and genuinely care. Highly recommend.",
     stars: 5,
-    avatar: "👨",
+    photo: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=200&q=80",
+    service: "Home Support",
   },
   {
     name: "Susan R.",
     role: "Client's Son",
     text: "Reliable, compassionate, and trustworthy. Sutim Healthcare has given our whole family peace of mind. They truly treat Dad like family.",
     stars: 5,
-    avatar: "👩‍🦱",
+    photo: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=200&q=80",
+    service: "Sitting Services",
   },
 ];
 
@@ -33,6 +36,16 @@ export default function Testimonials() {
           backgroundSize: "40px 40px",
         }}
       />
+
+      {/* Blurred background photo */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1600&q=60"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover opacity-10 blur-sm"
+        />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
@@ -54,30 +67,66 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-colors"
+              className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-900/40 transition-all duration-300"
             >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <span key={i} className="text-amber-400 text-lg">★</span>
-                ))}
+              {/* Top photo strip */}
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={t.photo}
+                  alt={`Care scene representing ${t.service}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/80 to-transparent" />
+                <span className="absolute bottom-3 left-4 text-white text-xs font-semibold bg-sky-600/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  {t.service}
+                </span>
               </div>
 
-              {/* Quote */}
-              <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
-                &ldquo;{t.text}&rdquo;
+              <div className="p-7">
+                {/* Stars */}
+                <div className="flex gap-0.5 mb-4">
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <span key={i} className="text-amber-400 text-lg">★</span>
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 border-t border-white/10 pt-4">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-sky-400/40 flex-shrink-0">
+                    <img
+                      src={t.photo}
+                      alt={t.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm">{t.name}</p>
+                    <p className="text-sky-300/70 text-xs">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom trust bar */}
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-8">
+          {[
+            { value: "100+", label: "Clients Supported" },
+            { value: "5★", label: "Average Rating" },
+            { value: "24/7", label: "Always Available" },
+            { value: "100%", label: "Person-Centred" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center group cursor-default">
+              <p className="text-3xl font-extrabold text-white group-hover:text-sky-300 transition-colors duration-200">
+                {stat.value}
               </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-sky-500/30 rounded-full flex items-center justify-center text-xl">
-                  {t.avatar}
-                </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-sky-300/70 text-xs">{t.role}</p>
-                </div>
-              </div>
+              <p className="text-sky-300/60 text-xs mt-1">{stat.label}</p>
             </div>
           ))}
         </div>

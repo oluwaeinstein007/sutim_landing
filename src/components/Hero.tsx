@@ -6,6 +6,21 @@ const stats = [
   { icon: Clock, label: "Support Available", value: "24/7" },
 ];
 
+const stripPhotos = [
+  {
+    src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=200&q=80",
+    alt: "Caregiver talking with elderly client",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=200&q=80",
+    alt: "Professional home care visit",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=200&q=80",
+    alt: "Compassionate elderly support",
+  },
+];
+
 export default function Hero() {
   return (
     <section
@@ -32,7 +47,7 @@ export default function Hero() {
         {/* Text */}
         <div>
           <span className="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 text-sky-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-            <span className="w-2 h-2 bg-sky-400 rounded-full pulse-slow"></span>
+            <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></span>
             Serving Pembrokeshire &amp; Surrounding Areas
           </span>
 
@@ -49,7 +64,7 @@ export default function Hero() {
             comfortably, safely, and independently.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-14">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a
               href="#contact"
               className="group inline-flex items-center justify-center gap-2 bg-white text-sky-800 font-bold px-7 py-4 rounded-full shadow-xl hover:bg-sky-50 transition-all hover:shadow-2xl hover:scale-105"
@@ -67,7 +82,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-8">
+          <div className="flex flex-wrap gap-8 mb-10">
             {stats.map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-sky-500/20 border border-sky-400/30 rounded-xl flex items-center justify-center">
@@ -80,19 +95,50 @@ export default function Hero() {
               </div>
             ))}
           </div>
+
+          {/* Photo strip */}
+          <div className="flex items-center gap-3">
+            <p className="text-sky-300/70 text-xs font-medium whitespace-nowrap">Our care in action:</p>
+            {stripPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="w-14 h-14 rounded-xl overflow-hidden border-2 border-white/20 flex-shrink-0 hover:border-sky-400/60 hover:scale-110 transition-all duration-300 cursor-default"
+              >
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" />
+              </div>
+            ))}
+            <div className="w-14 h-14 rounded-xl bg-sky-500/20 border-2 border-sky-400/30 flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-[10px] font-bold text-center leading-tight px-1">
+                100+<br />Clients
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Visual — photo */}
         <div className="hidden lg:flex justify-center">
           <div className="relative">
             {/* Main photo */}
-            <div className="float relative w-[380px] h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+            <div className="float relative w-[380px] h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-white/20">
               <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=760&q=80"
-                alt="Dedicated healthcare professional providing compassionate home support"
+                alt="Dedicated caregiver bringing a nutritious meal to an elderly client at home"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent" />
+
+              {/* Overlay service pills */}
+              <div className="absolute top-4 left-4 flex flex-col gap-2">
+                {["Meal Preparation", "24/7 Available", "Person-Centred"].map((pill) => (
+                  <span
+                    key={pill}
+                    className="bg-white/20 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-full border border-white/20"
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
+
               <div className="absolute bottom-5 left-5 right-5 bg-sky-500/20 border border-sky-400/30 backdrop-blur-sm rounded-xl px-4 py-3 text-center">
                 <p className="text-sky-200 text-sm font-medium">
                   Available{" "}
@@ -102,12 +148,12 @@ export default function Hero() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -top-6 -right-6 bg-cyan-500 text-white font-bold text-sm px-4 py-2 rounded-full shadow-lg rotate-3">
+            <div className="absolute -top-6 -right-6 bg-cyan-500 text-white font-bold text-sm px-4 py-2 rounded-full shadow-lg rotate-3 hover:rotate-0 transition-transform duration-300">
               Free Consultation
             </div>
 
             {/* Floating phone card */}
-            <div className="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3">
+            <div className="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300">
               <div className="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center">
                 <Phone className="w-5 h-5 text-sky-700" />
               </div>
@@ -116,6 +162,7 @@ export default function Hero() {
                 <p className="text-gray-900 font-bold text-sm">07881 189990</p>
               </div>
             </div>
+
           </div>
         </div>
       </div>
