@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-teal-600 rounded-full flex items-center justify-center group-hover:bg-teal-700 transition-colors">
+          <div className="w-9 h-9 bg-sky-600 rounded-full flex items-center justify-center group-hover:bg-sky-700 transition-colors">
             <Heart className="w-5 h-5 text-white fill-white" />
           </div>
           <span
@@ -40,7 +40,7 @@ export default function Navbar() {
               scrolled ? "text-gray-900" : "text-white"
             }`}
           >
-            Sutim<span className="text-teal-500"> Healthcare</span>
+            Sutim<span className="text-sky-500"> Healthcare</span>
           </span>
         </a>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-teal-500 ${
+                className={`text-sm font-medium transition-colors hover:text-sky-500 ${
                   scrolled ? "text-gray-700" : "text-white/90"
                 }`}
               >
@@ -63,7 +63,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-teal-300/40 hover:shadow-lg"
+          className="hidden md:inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-sky-300/40 hover:shadow-lg"
         >
           Free Consultation
         </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-gray-700 font-medium hover:text-teal-600 block transition-colors"
+                  className="text-gray-700 font-medium hover:text-sky-600 block transition-colors"
                 >
                   {link.label}
                 </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
-                className="inline-flex items-center justify-center w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-2.5 rounded-full transition-colors"
+                className="inline-flex items-center justify-center w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold px-5 py-2.5 rounded-full transition-colors"
               >
                 Free Consultation
               </a>

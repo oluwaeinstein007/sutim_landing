@@ -13,15 +13,21 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: illustration / visual */}
           <div className="relative order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl p-10 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-3xl p-10 relative overflow-hidden">
               {/* Decorative circle */}
-              <div className="absolute -top-10 -left-10 w-48 h-48 bg-teal-200/40 rounded-full" />
-              <div className="absolute -bottom-10 -right-10 w-36 h-36 bg-emerald-200/40 rounded-full" />
+              <div className="absolute -top-10 -left-10 w-48 h-48 bg-sky-200/40 rounded-full" />
+              <div className="absolute -bottom-10 -right-10 w-36 h-36 bg-cyan-200/40 rounded-full" />
 
               <div className="relative space-y-6">
-                <div className="text-6xl text-center mb-2">👩‍⚕️</div>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-teal-100">
-                  <h3 className="text-teal-800 font-bold text-lg mb-2">Our Mission</h3>
+                <div className="relative w-full h-52 rounded-2xl overflow-hidden mb-2 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80"
+                    alt="Compassionate caregiver providing professional home support"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="bg-white rounded-2xl p-6 shadow-sm border border-sky-100">
+                  <h3 className="text-sky-800 font-bold text-lg mb-2">Our Mission</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     To deliver compassionate, reliable, and person-centred care that
                     enhances the quality of life for every individual we support.
@@ -37,7 +43,7 @@ export default function About() {
                   ].map(({ emoji, label }) => (
                     <div
                       key={label}
-                      className="bg-white border border-teal-100 rounded-xl px-4 py-3 flex items-center gap-3 shadow-sm"
+                      className="bg-white border border-sky-100 rounded-xl px-4 py-3 flex items-center gap-3 shadow-sm"
                     >
                       <span className="text-xl">{emoji}</span>
                       <span className="text-gray-700 text-sm font-medium">{label}</span>
@@ -50,12 +56,12 @@ export default function About() {
 
           {/* Right: text */}
           <div className="order-1 lg:order-2">
-            <span className="inline-block text-teal-600 font-semibold text-sm uppercase tracking-widest mb-3">
+            <span className="inline-block text-sky-600 font-semibold text-sm uppercase tracking-widest mb-3">
               About Us
             </span>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
               Who We{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500">
                 Are
               </span>
             </h2>
@@ -76,7 +82,7 @@ export default function About() {
               {values.map((v) => (
                 <div
                   key={v.title}
-                  className="flex items-start gap-3 bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-teal-200 hover:bg-teal-50/30 transition-colors"
+                  className="flex items-start gap-3 bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-sky-200 hover:bg-sky-50/30 transition-colors"
                 >
                   <span className="text-2xl mt-0.5">{v.emoji}</span>
                   <div>

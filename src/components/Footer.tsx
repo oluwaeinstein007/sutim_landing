@@ -30,7 +30,7 @@ export default function Footer() {
                 key={p.title}
                 className="bg-gray-800/50 border border-gray-700 rounded-2xl p-6"
               >
-                <h4 className="font-bold text-teal-400 mb-2 text-sm">{p.title}</h4>
+                <h4 className="font-bold text-sky-400 mb-2 text-sm">{p.title}</h4>
                 <p className="text-gray-400 text-xs leading-relaxed">{p.text}</p>
               </div>
             ))}
@@ -44,11 +44,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-teal-600 rounded-full flex items-center justify-center">
+              <div className="w-9 h-9 bg-sky-600 rounded-full flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white fill-white" />
               </div>
               <span className="font-bold text-lg">
-                Sutim<span className="text-teal-400"> Healthcare</span>
+                Sutim<span className="text-sky-400"> Healthcare</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li key={href}>
                   <a
                     href={href}
-                    className="text-gray-400 hover:text-teal-400 text-sm transition-colors"
+                    className="text-gray-400 hover:text-sky-400 text-sm transition-colors"
                   >
                     {label}
                   </a>
@@ -85,13 +85,13 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
-                <Phone className="w-4 h-4 text-teal-400 flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
                 <span>
-                  <a href="tel:07881189990" className="hover:text-teal-400 transition-colors">
+                  <a href="tel:07881189990" className="hover:text-sky-400 transition-colors">
                     07881 189990
                   </a>{" "}
                   /{" "}
-                  <a href="tel:07881189989" className="hover:text-teal-400 transition-colors">
+                  <a href="tel:07881189989" className="hover:text-sky-400 transition-colors">
                     07881 189989
                   </a>
                   <br />
@@ -99,13 +99,13 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
-                <Mail className="w-4 h-4 text-teal-400 flex-shrink-0" />
-                <a href="mailto:info@sutimhealthcare.co.uk" className="hover:text-teal-400 transition-colors">
+                <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                <a href="mailto:info@sutimhealthcare.co.uk" className="hover:text-sky-400 transition-colors">
                   info@sutimhealthcare.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 text-teal-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
                 <span>5, 6 Market Square,<br />Narberth, Pembrokeshire</span>
               </li>
             </ul>

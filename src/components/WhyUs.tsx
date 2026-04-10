@@ -37,12 +37,12 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-teal-600 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span className="inline-block text-sky-600 font-semibold text-sm uppercase tracking-widest mb-3">
             Why Choose Us
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             We Go{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500">
               Beyond
             </span>{" "}
             Basic Support
@@ -60,10 +60,10 @@ export default function WhyUs() {
               className="relative group"
             >
               {/* Number badge */}
-              <span className="absolute -top-3 -left-3 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
+              <span className="absolute -top-3 -left-3 w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
                 {i + 1}
               </span>
-              <div className="h-full bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:border-teal-200 hover:shadow-xl hover:bg-teal-50/20 transition-all duration-300">
+              <div className="h-full bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:border-sky-200 hover:shadow-xl hover:bg-sky-50/20 transition-all duration-300">
                 <span className="text-4xl mb-4 block">{r.icon}</span>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{r.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
@@ -73,12 +73,12 @@ export default function WhyUs() {
         </div>
 
         {/* Quote banner */}
-        <div className="mt-16 bg-gradient-to-r from-teal-700 to-emerald-700 rounded-3xl p-10 text-center text-white relative overflow-hidden">
+        <div className="mt-16 bg-gradient-to-r from-sky-700 to-cyan-700 rounded-3xl p-10 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`, backgroundSize: "30px 30px" }} />
           <p className="relative text-2xl sm:text-3xl font-bold mb-2 italic">
             &ldquo;We treat every client like family.&rdquo;
           </p>
-          <p className="relative text-teal-200 text-sm">— Sutim Healthcare Services Ltd</p>
+          <p className="relative text-sky-200 text-sm">— Sutim Healthcare Services Ltd</p>
         </div>
 
         {/* Areas */}
@@ -87,7 +87,7 @@ export default function WhyUs() {
           <p className="text-gray-500 mb-4">We proudly serve individuals and families across:</p>
           <div className="flex flex-wrap justify-center gap-3">
             {["Pembrokeshire", "Narberth", "Surrounding Areas"].map((area) => (
-              <span key={area} className="bg-teal-100 text-teal-800 font-semibold px-5 py-2 rounded-full text-sm border border-teal-200">
+              <span key={area} className="bg-sky-100 text-sky-800 font-semibold px-5 py-2 rounded-full text-sm border border-sky-200">
                 {area}
               </span>
             ))}

@@ -27,7 +27,7 @@ const services = [
     emoji: "🍲",
     title: "Meal Preparation",
     desc: "Assistance with preparing nutritious, home-cooked meals to support healthy living and a good quality of life.",
-    color: "from-green-50 to-emerald-50",
+    color: "from-green-50 to-cyan-50",
     border: "border-green-200",
     badge: "bg-green-100 text-green-700",
   },
@@ -43,9 +43,9 @@ const services = [
     emoji: "🪑",
     title: "Sitting Services",
     desc: "Short-term supervision and support giving family members peace of mind when they need a break or have commitments.",
-    color: "from-teal-50 to-cyan-50",
-    border: "border-teal-200",
-    badge: "bg-teal-100 text-teal-700",
+    color: "from-sky-50 to-cyan-50",
+    border: "border-sky-200",
+    badge: "bg-sky-100 text-sky-700",
   },
 ];
 
@@ -55,12 +55,12 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-teal-600 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span className="inline-block text-sky-600 font-semibold text-sm uppercase tracking-widest mb-3">
             What We Offer
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500">
               Services
             </span>
           </h2>
@@ -91,7 +91,7 @@ export default function Services() {
           <p className="text-gray-500 mb-4">Not sure which service you need?</p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-teal-300/40 transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-sky-300/40 transition-all hover:scale-105"
           >
             Talk to Us — It&apos;s Free
           </a>

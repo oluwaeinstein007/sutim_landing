@@ -24,28 +24,28 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-sky-900 via-sky-800 to-cyan-900 relative overflow-hidden">
       {/* Decorative dots */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: `radial-gradient(circle, #5eead4 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #38bdf8 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
         }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="inline-block text-teal-300 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span className="inline-block text-sky-300 font-semibold text-sm uppercase tracking-widest mb-3">
             Testimonials
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
             What Our Clients{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-cyan-300">
               Say
             </span>
           </h2>
-          <p className="text-teal-200/70 text-lg max-w-xl mx-auto">
+          <p className="text-sky-200/70 text-lg max-w-xl mx-auto">
             Real stories from real people whose lives we&apos;ve had the privilege of touching.
           </p>
         </div>
@@ -70,12 +70,12 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-teal-500/30 rounded-full flex items-center justify-center text-xl">
+                <div className="w-10 h-10 bg-sky-500/30 rounded-full flex items-center justify-center text-xl">
                   {t.avatar}
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-teal-300/70 text-xs">{t.role}</p>
+                  <p className="text-sky-300/70 text-xs">{t.role}</p>
                 </div>
               </div>
             </div>
