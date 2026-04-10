@@ -33,20 +33,20 @@ const reasons = [
 
 const photoRow = [
   {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80",
-    alt: "Caregiver bringing a meal to elderly client",
+    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=500&q=80",
+    alt: "Person preparing a home-cooked meal in the kitchen",
   },
   {
     src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=500&q=80",
     alt: "Caregiver sharing a warm moment with elderly lady",
   },
   {
-    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80",
-    alt: "Professional caregiver providing attentive support",
+    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80",
+    alt: "Caregiver sitting with and supporting an elderly client",
   },
   {
-    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=500&q=80",
-    alt: "Compassionate elderly care at home",
+    src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?auto=format&fit=crop&w=500&q=80",
+    alt: "Elderly person and young adult walking together outdoors",
   },
 ];
 

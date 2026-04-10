@@ -18,8 +18,8 @@ const galleryPhotos = {
     caption: "Companionship",
   },
   bottomRight: {
-    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80",
-    alt: "Attentive caregiver providing professional home support",
+    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80",
+    alt: "Caregiver sitting with and supporting an elderly client at home",
     caption: "Home Support",
   },
 };

@@ -12,12 +12,12 @@ const stripPhotos = [
     alt: "Caregiver talking with elderly client",
   },
   {
-    src: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=200&q=80",
-    alt: "Professional home care visit",
+    src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=200&q=80",
+    alt: "Caregiver helping with household tasks at home",
   },
   {
-    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=200&q=80",
-    alt: "Compassionate elderly support",
+    src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?auto=format&fit=crop&w=200&q=80",
+    alt: "Elderly person walking with a young carer outdoors",
   },
 ];
 
