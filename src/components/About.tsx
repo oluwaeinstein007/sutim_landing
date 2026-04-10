@@ -18,7 +18,7 @@ const galleryPhotos = {
     caption: "Companionship",
   },
   bottomRight: {
-    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80",
+    src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?auto=format&fit=crop&w=500&q=80",
     alt: "Caregiver sitting with and supporting an elderly client at home",
     caption: "Home Support",
   },
