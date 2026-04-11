@@ -1,9 +1,8 @@
-import { Phone, ArrowRight, Star, Users, Clock } from "lucide-react";
+import { Phone, ArrowRight, Clock, MapPin } from "lucide-react";
 
 const stats = [
-  { icon: Users, label: "Clients Supported", value: "100+" },
-  { icon: Star, label: "5-Star Service", value: "★★★★★" },
   { icon: Clock, label: "Support Available", value: "24/7" },
+  { icon: MapPin, label: "Based in Pembrokeshire", value: "Local" },
 ];
 
 const stripPhotos = [
@@ -107,11 +106,6 @@ export default function Hero() {
                 <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" />
               </div>
             ))}
-            <div className="w-14 h-14 rounded-xl bg-sky-500/20 border-2 border-sky-400/30 flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-[10px] font-bold text-center leading-tight px-1">
-                100+<br />Clients
-              </span>
-            </div>
           </div>
         </div>
 
