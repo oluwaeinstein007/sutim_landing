@@ -41,11 +41,11 @@ const photoRow = [
     alt: "Caregiver sharing a warm moment with elderly lady",
   },
   {
-    src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?auto=format&fit=crop&w=500&q=80",
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80",
     alt: "Caregiver sitting with and supporting an elderly client",
   },
   {
-    src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?auto=format&fit=crop&w=500&q=80",
+    src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80",
     alt: "Elderly person and young adult walking together outdoors",
   },
 ];
