@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
 const services = [
+  "Cleaning Services",
   "Companionship",
-  "Domestic Support",
   "Shopping Assistance",
   "Meal Preparation",
   "Appointment Escort",

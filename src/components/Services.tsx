@@ -2,19 +2,19 @@ import { ArrowRight } from "lucide-react";
 
 const services = [
   {
+    emoji: "🧹",
+    title: "Cleaning Services",
+    desc: "Professional, thorough cleaning of your home — from regular upkeep to deep cleans — so you can enjoy a spotless, comfortable living space.",
+    photo: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
+    photoAlt: "Person cleaning and tidying a home",
+    accent: "sky",
+  },
+  {
     emoji: "🤝",
     title: "Companionship",
     desc: "Friendly companionship to reduce loneliness and promote emotional well-being. We're here to listen, share, and brighten your day.",
     photo: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=80",
     photoAlt: "Caregiver in warm conversation with elderly client at home",
-    accent: "sky",
-  },
-  {
-    emoji: "🧹",
-    title: "Domestic Support",
-    desc: "Helping with everyday household tasks such as cleaning, laundry, and maintaining a safe, comfortable home environment.",
-    photo: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
-    photoAlt: "Person cleaning and tidying a home",
     accent: "blue",
   },
   {
