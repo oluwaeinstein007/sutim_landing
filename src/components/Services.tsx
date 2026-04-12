@@ -29,8 +29,8 @@ const services = [
     emoji: "🍲",
     title: "Meal Preparation",
     desc: "Assistance with preparing nutritious, home-cooked meals to support healthy living and a good quality of life.",
-    photo: "https://images.pexels.com/photos/5491156/pexels-photo-5491156.jpeg?auto=compress&cs=tinysrgb&w=600",
-    photoAlt: "Caregiver helping elderly woman prepare a meal in the kitchen",
+    photo: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+    photoAlt: "Nutritious home-cooked meal in a bowl",
     accent: "sky",
   },
   {
