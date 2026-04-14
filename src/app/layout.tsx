@@ -75,6 +75,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Sutim Healthcare Services Ltd — Caring for Pembrokeshire",
       },
+      {
+        url: "/logo-icon.png",
+        width: 258,
+        height: 228,
+        alt: "Sutim Healthcare Services Ltd Logo",
+      },
     ],
   },
   twitter: {
@@ -82,7 +88,7 @@ export const metadata: Metadata = {
     title: "Sutim Healthcare Services Ltd | Home Care in Pembrokeshire",
     description:
       "Compassionate home care, cleaning, and support worker services in Pembrokeshire & Narberth. Free initial consultation.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.jpg", "/logo-icon.png"],
   },
   category: "healthcare",
 };
