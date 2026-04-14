@@ -11,14 +11,6 @@ const siteUrl = "https://www.sutimhealthcare.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon-32x32.png",
-  },
   title: {
     default: "Sutim Healthcare Services Ltd | Home Care & Cleaning in Pembrokeshire",
     template: "%s | Sutim Healthcare Services Ltd",
