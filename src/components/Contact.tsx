@@ -47,6 +47,10 @@ export default function Contact() {
           from_email: form.email || "Not provided",
           service_needed: form.service || "Not specified",
           message: form.message || "No message provided",
+          time: new Date().toLocaleString("en-GB", {
+            dateStyle: "full",
+            timeStyle: "short",
+          }),
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
