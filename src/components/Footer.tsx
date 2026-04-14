@@ -1,4 +1,5 @@
 import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const policies = [
   {
@@ -43,13 +44,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-sky-600 rounded-full flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white fill-white" />
-              </div>
-              <span className="font-bold text-lg">
-                Sutim<span className="text-sky-400"> Healthcare</span>
-              </span>
+            <div className="inline-flex bg-white rounded-xl px-3 py-2 mb-4">
+              <Image
+                src="/logo-dark.png"
+                alt="Sutim Healthcare Services Ltd"
+                width={342}
+                height={100}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Compassionate, person-centred non-regulated care services in
@@ -100,8 +102,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <a href="mailto:info@sutimhealthcare.co.uk" className="hover:text-sky-400 transition-colors">
-                  info@sutimhealthcare.co.uk
+                <a href="mailto:Info@timothysutimservices.co.uk" className="hover:text-sky-400 transition-colors">
+                  Info@timothysutimservices.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400 text-sm">

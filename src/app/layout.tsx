@@ -7,10 +7,18 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://sutim-landing.vercel.app";
+const siteUrl = "https://www.sutimhealthcare.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon-32x32.png",
+  },
   title: {
     default: "Sutim Healthcare Services Ltd | Home Care & Cleaning in Pembrokeshire",
     template: "%s | Sutim Healthcare Services Ltd",
@@ -93,7 +101,7 @@ export default function RootLayout({
       "Person-centred home care services including cleaning, companionship, meal preparation, domestic support, and support worker services in Pembrokeshire, Wales.",
     url: siteUrl,
     telephone: "+447881189990",
-    email: "info@sutimhealthcare.co.uk",
+    email: "Info@timothysutimservices.co.uk",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Narberth",

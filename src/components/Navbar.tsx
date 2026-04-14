@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -31,17 +32,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-sky-600 rounded-full flex items-center justify-center group-hover:bg-sky-700 transition-colors">
-            <Heart className="w-5 h-5 text-white fill-white" />
-          </div>
-          <span
-            className={`font-bold text-lg transition-colors ${
-              scrolled ? "text-gray-900" : "text-white"
-            }`}
-          >
-            Sutim<span className="text-sky-500"> Healthcare</span>
-          </span>
+        <a href="#home" className="flex items-center">
+          <Image
+            src={scrolled ? "/logo-dark.png" : "/logo-light.png"}
+            alt="Sutim Healthcare Services Ltd"
+            width={342}
+            height={100}
+            className="h-11 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop links */}

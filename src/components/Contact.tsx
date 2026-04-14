@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 const services = [
   "Cleaning Services",
@@ -15,6 +16,8 @@ const services = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -29,10 +32,30 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // In production this would POST to an API route
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: form.name,
+          from_phone: form.phone,
+          from_email: form.email || "Not provided",
+          service_needed: form.service || "Not specified",
+          message: form.message || "No message provided",
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      setSubmitted(true);
+    } catch {
+      setError("Sorry, something went wrong. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -82,8 +105,8 @@ export default function Contact() {
               {
                 icon: Mail,
                 label: "Email",
-                lines: ["info@sutimhealthcare.co.uk"],
-                href: "mailto:info@sutimhealthcare.co.uk",
+                lines: ["Info@timothysutimservices.co.uk"],
+                href: "mailto:Info@timothysutimservices.co.uk",
                 color: "bg-blue-100 text-blue-700",
               },
               {
@@ -227,12 +250,23 @@ export default function Contact() {
                     />
                   </div>
 
+                  {error && (
+                    <div className="flex items-start gap-2 text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm">
+                      <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <span>{error}</span>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-sky-300/30 hover:scale-[1.02]"
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 disabled:bg-sky-400 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-sky-300/30 hover:scale-[1.02] disabled:scale-100"
                   >
-                    <Send className="w-4 h-4" />
-                    Submit Enquiry
+                    {loading ? (
+                      <><Loader2 className="w-4 h-4 animate-spin" /> Sending…</>
+                    ) : (
+                      <><Send className="w-4 h-4" /> Submit Enquiry</>
+                    )}
                   </button>
 
                   <p className="text-center text-gray-400 text-xs">
